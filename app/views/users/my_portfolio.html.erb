@@ -1,0 +1,21 @@
+<h1>My Portfolio</h1>
+
+<div class="mt-5">
+    <h1>Search Stocks</h1>
+    <%= form_with  url: search_stock_path, :method => "get", local: false do%>
+      <div class="form-group row"> 
+          <div class="col-sm-9">
+              <%= text_field_tag :stock, params[:stock], placeholder: "Stock ticker", autofocus: true, class: "form-control form-control-lg"%>
+          </div>
+          <div>
+              <%= button_tag type: :submit, class: "btn btn-success btn-lg" do%>
+                  <%='Search'%>
+              <%end%>
+
+          </div>
+      </div>   
+    <%end%>
+</div>
+
+
+
